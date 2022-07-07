@@ -30,10 +30,19 @@ const Home = ({ navigation }) => {
     }
 
     // fin de code office de bureau progrmini 
+    // page inscription 
+    const hanleSignUp = ()=>{
+        //  navigation.navigate('Portefolio')
+        navigation.navigate({routeName: "Inscription"})
+        //navigation.push('Portefolio')
+
+    }
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Date du jour : { currentDate } </Text>
-            <Text style={styles.messageWelcole}>Bienvenue chez votre Office : plus de flexibilité et d'organisation. Ceci est une application à titre apprentissage rapide du langage react native en créant une sorte d'application de réservation des salles dans nitre offiche. 
+            <Text style={styles.messageWelcole}>Bienvenue chez votre Office : plus de flexibilité et d'organisation. 
+            Ceci est une application à titre apprentissage rapide du langage 
+            react native en créant une sorte d'application de réservation des salles dans nitre offiche. 
             Welcome To progrmini!  </Text>
            <View style={styles.boutonnav}>
            <Text>🕸️</Text>
@@ -43,6 +52,10 @@ const Home = ({ navigation }) => {
             <Text>🕸️</Text>
             <Button style={styles.boutonnav} title="Office" 
             onPress={hanlePressOffice} />
+            {/* bouton inscripption  */}
+            <Text>🕸️</Text>
+            <Button style={styles.boutonnav} title="Inscription" 
+            onPress={hanleSignUp} />
            </View>
         </View>
     );

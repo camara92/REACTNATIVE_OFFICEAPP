@@ -25,7 +25,7 @@ const Photo = (props) => {
 
 const styles = StyleSheet.create({
 container:{
-    backgroundColor: "lightgreen", 
+    backgroundColor: "lightblue", 
     flex:1, 
     justifyContent:"center", 
     alignItems:"center", 

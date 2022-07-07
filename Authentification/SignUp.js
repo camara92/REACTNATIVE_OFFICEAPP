@@ -1,17 +1,26 @@
 import React from 'react';
 import {View, StyleSheet, Text, Button} from 'react-native';
 
-const Portefolio = (props) => {
+const Inscription = (props) => {
     const hanlePress = ()=>{
-        props.navigation.navigate('Photo')
-       //navigation.push('Portefolio')
+        props.navigation.navigate('Inscription')
+      
 
    }
+   const hanlePressHome = ()=>{
+    props.navigation.navigate('Home')
+  
+
+}
+   
     return (
         <View style={styles.container}>
-        <Text style={styles.text}>Portefolio</Text>
-        <Button title="Photo" 
+        <Text style={styles.text}>Vous êtes sur la page d'inscription</Text>
+        <Button title="S'inscrire" 
             onPress={hanlePress} />
+        <Text> - </Text>
+        <Button title="Home" 
+            onPress={hanlePressHome} />
 
     </View>
 );
@@ -30,4 +39,4 @@ text:{
 }
 })
 
-export default Portefolio;
+export default Inscription;

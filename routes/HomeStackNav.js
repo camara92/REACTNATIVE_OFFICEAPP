@@ -5,6 +5,7 @@ import Portefolio from '../SCREENS/portefolio';
 import Photo from '../SCREENS/photo';
 import Office from '../Office/Office';
 import moment from 'moment';
+import Inscription from '../Authentification/SignUp';
 
 
 // importer les ecrans 
@@ -40,6 +41,9 @@ const screens ={
     }, 
     Office: {
         screen:Office
+    }, 
+    Inscription:{
+        screen:Inscription
     }
 
  }
