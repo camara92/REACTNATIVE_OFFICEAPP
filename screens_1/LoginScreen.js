@@ -29,7 +29,7 @@ const Login = () => {
     const handleSignIn = ()=> {
       signInWithEmailAndPassword(auth, email, password)
       .then(()=>{
-        console.log('vous etes inscrit. Merci')
+        console.log('Vous êtes connecté. Bienvenue dans votre compte affluence. ')
         const user = userCredentials.user; 
         console.log(user)
       })
@@ -65,7 +65,7 @@ const Login = () => {
         onPress={handleSignIn}
         style={styles.button}
       >
-      <Text style={styles.buttonText}>Login </Text>
+      <Text style={styles.buttonText}>Se connecter </Text>
 
       </TouchableOpacity>
       <TouchableOpacity 
@@ -73,7 +73,7 @@ const Login = () => {
         style={[styles.button, styles.buttonOutline]}
       >
       {/* <Text style={styles.buttonOutlineText}>Register  </Text> */}
-      <Text style={styles.buttonOutlineText}>Register  </Text>
+      <Text style={styles.buttonOutlineText}>S'inscrire  </Text>
 
       </TouchableOpacity>
 

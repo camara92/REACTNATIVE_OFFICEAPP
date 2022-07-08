@@ -9,7 +9,6 @@ const Inscription = (props) => {
    }
    const hanlePressHome = ()=>{
     props.navigation.navigate('Home')
-  
 
 }
    

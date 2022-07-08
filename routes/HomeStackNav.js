@@ -47,7 +47,7 @@ const screens ={
     }, 
     LoginScreen:{
         screen: LoginScreen
-    }
+    }, 
 
  }
 const StackNav= createStackNavigator(screens)
