@@ -1,7 +1,7 @@
 import { StyleSheet, Text, KeyboardAvoidingView, View, TextInput, Button, placeholder } from 'react-native'
 import React,{useState} from 'react'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import { auth } from '../firebase'
+//import { auth } from '../firebase'
 
 const Login = () => {
   const [email, setEmail ]= useState(''); 
