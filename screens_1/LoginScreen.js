@@ -1,21 +1,42 @@
 import { StyleSheet, Text, KeyboardAvoidingView, View, TextInput, Button, placeholder } from 'react-native'
 import React,{useState} from 'react'
-import { TouchableOpacity } from 'react-native-gesture-handler'
+import { TouchableOpacity } from 'react-native';
+//import {auth } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js"
 //import { auth } from '../firebase'
-
+import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'; 
+import { initializeApp } from '@firebase/app';
+import { firebaseConfig } from '../firebase-config';
 const Login = () => {
-  const [email, setEmail ]= useState(''); 
-  const [password, setPassword ]= useState(''); 
+  const [email, setEmail ]= useState('')
+  const [password, setPassword ]= useState('') 
+  const app = initializeApp(firebaseConfig); 
+  const auth = getAuth(app); 
+
 
     // 
-    const handleSignUp = ()=>{
-        auth
-        .createUserWithEmailAndPassword(email, password)
+    const handleSignUp = () =>{
+        // auth
+        createUserWithEmailAndPassword(auth, email, password)
         .then(userCredentials =>{
+          console.log(user)
             const user= userCredentials.user; 
             console.log(user.email); 
         })
         .catch(error =>alert(error.message))
+    }
+
+    // login 
+    const handleSignIn = ()=> {
+      signInWithEmailAndPassword(auth, email, password)
+      .then(()=>{
+        console.log('vous etes inscrit. Merci')
+        const user = userCredentials.user; 
+        console.log(user)
+      })
+      .catch(error =>{
+        console.log(error)
+
+      })
     }
   return (
     <KeyboardAvoidingView style={styles.container}
@@ -40,7 +61,8 @@ const Login = () => {
       </View>
       <View style={styles.buttonContainer}>
       <TouchableOpacity 
-        onPress={()=>{}}
+        // onPress={()=>{}}
+        onPress={handleSignIn}
         style={styles.button}
       >
       <Text style={styles.buttonText}>Login </Text>
