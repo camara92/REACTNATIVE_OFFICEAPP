@@ -1,5 +1,5 @@
 // import { StatusBar } from 'expo-status-bar';
- import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import React  from 'react';
 import Home from './SCREENS/home';
 import StackNav from './routes/HomeStackNav'
@@ -10,7 +10,17 @@ import {
   Inter_900Black,
 } from '@expo-google-fonts/inter';
 
+
+// react navigation 
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createNativeStackNavigator } from '@react-navigation-stack';
+// const Stack = createNativeStackNavigator();
+// // fin de react nav 
 export default () => {
+
+  
+
+
   let [fontsLoaded] = useFonts({
     Inter_900Black,
    

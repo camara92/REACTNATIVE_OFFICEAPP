@@ -3,7 +3,7 @@ import {View, StyleSheet, Text, Button} from 'react-native';
 
 const Inscription = (props) => {
     const hanlePress = ()=>{
-        props.navigation.navigate('Inscription')
+        props.navigation.navigate('LoginScreen')
       
 
    }

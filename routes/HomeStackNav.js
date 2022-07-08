@@ -6,8 +6,8 @@ import Photo from '../SCREENS/photo';
 import Office from '../Office/Office';
 import moment from 'moment';
 import Inscription from '../Authentification/SignUp';
-
-
+import LoginScreen from '../screens_1/LoginScreen';
+import HomeScreen from '../screens_1/HomeScreen';
 // importer les ecrans 
 //  const screens ={
 //     Home:Home, 
@@ -44,6 +44,9 @@ const screens ={
     }, 
     Inscription:{
         screen:Inscription
+    }, 
+    LoginScreen:{
+        screen: LoginScreen
     }
 
  }
