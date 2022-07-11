@@ -42,7 +42,7 @@ const Home = ({ navigation }) => {
         <View style={styles.container}>
             <Text style={styles.text}>Date du jour : { currentDate } </Text>
 
-            {/* <Text> {messageBienvenue} </Text> */}
+           
             <Text style={styles.messageWelcole}>Bienvenue chez votre Office : plus de flexibilité et d'organisation. 
             Ceci est une application à titre apprentissage rapide du langage 
             react native en créant une sorte d'application de réservation des salles dans notre offiche. 

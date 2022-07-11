@@ -53,13 +53,13 @@ const screens ={
             title: "Inscription" 
         }
     }, 
-    // Profile:{
-    //     screen:MyProfil, 
-    //     navigationOptions:
-    //     {
-    //         title: "Profile"
-    //     }
-    // }
+    MyProfile:{
+        screen:MyProfil, 
+        navigationOptions:
+        {
+            title: "Profile"
+        }
+    }
 
  }
 const StackNav= createStackNavigator(screens)
