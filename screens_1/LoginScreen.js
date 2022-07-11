@@ -11,7 +11,7 @@ const Login = () => {
   const [password, setPassword ]= useState('') 
   const app = initializeApp(firebaseConfig); 
   const auth = getAuth(app); 
-
+  const WelcomeMessage= ("Bienvenue "+user.email)
 
     // 
     const handleSignUp = () =>{
@@ -22,6 +22,7 @@ const Login = () => {
           console.log(user)
             const user= userCredentials.user; 
             console.log(user.email); 
+          
         })
         .catch(error =>alert(error.message))
     }
@@ -29,27 +30,36 @@ const Login = () => {
     // login 
     const handleSignIn = ()=> {
       signInWithEmailAndPassword(auth, email, password)
-      .then(()=>{
+      .then((userCredentials)=>{
        
         console.log('Vous êtes connecté. Bienvenue dans votre compte affluence. ')
+        // userCredentials.seconnecter
         const user = userCredentials.user; 
         console.log(user)
+        // navigation.navigate({routeName: "Profile"})
+          hanlePressAfterSign();
       })
       .catch(error =>{
         console.log(error)
 
       })
     }
+    // redirect to page profile for example
+    const hanlePressAfterSign = ()=>{
+    
+      navigation.navigate({routeName: "Profile"})
+  }
   return (
     <KeyboardAvoidingView style={styles.container}
     behavior="padding">
       <View style={styles.inputContainer}>
         <TextInput 
+            minlength="8" required
             placeholder='Email'
             value={email}
             onChangeText={text=>setEmail(text)}
             style={styles.input }
-            secureTextEntry
+            
 
         />
           <TextInput 
@@ -76,7 +86,9 @@ const Login = () => {
         style={[styles.button, styles.buttonOutline]}
       >
       {/* <Text style={styles.buttonOutlineText}>Register  </Text> */}
-      <Text style={styles.buttonOutlineText}>S'inscrire  </Text>
+      <Text style={styles.buttonOutlineText}
+      
+      onPress={hanlePressAfterSign}>S'inscrire  </Text>
 
       </TouchableOpacity>
 
