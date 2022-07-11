@@ -3,7 +3,7 @@ import { View, StyleSheet, Text, Button, Image } from "react-native";
 
 // const image = "/assets/images/avatarprofile.jpg";
 const Photo = (props) => {
-  const hanlePress = () => {
+  const handlePress = () => {
     // navigate permet d'aller vers n'importe quel ecran à un autre
     // push que chaine de caractere
     //props.navigation.navigate('Home')
@@ -21,7 +21,7 @@ const Photo = (props) => {
         source={{ uri: "https://picsum.photos/seed/picsum/400/500" }}
         style={styles.imagesProfile}
       />
-      <Button title="Retour vers La Home" onPress={hanlePress} />
+      <Button title="Retour vers La Home" onPress={handlePress} />
     </View>
   );
 };

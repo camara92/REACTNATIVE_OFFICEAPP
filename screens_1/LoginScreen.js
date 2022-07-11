@@ -11,21 +11,21 @@ const Login = () => {
   const [password, setPassword ]= useState('') 
   const app = initializeApp(firebaseConfig); 
   const auth = getAuth(app); 
-  const WelcomeMessage= ("Bienvenue "+user.email)
-
-    // 
-    const handleSignUp = () =>{
-        // auth
-        
-        createUserWithEmailAndPassword(auth, email, password)
-        .then(userCredentials =>{
-          console.log(user)
-            const user= userCredentials.user; 
-            console.log(user.email); 
-          
-        })
-        .catch(error =>alert(error.message))
-    }
+  
+  // 
+  const handleSignUp = () =>{
+    // auth
+    
+    createUserWithEmailAndPassword(auth, email, password)
+    .then(userCredentials =>{
+      console.log(user)
+      const user= userCredentials.user; 
+      console.log(user.email); 
+      
+    })
+    .catch(error =>alert(error.message))
+  }
+    // const WelcomeMessage= ("Bienvenue "+email)
 
     // login 
     const handleSignIn = ()=> {
@@ -79,7 +79,7 @@ const Login = () => {
         style={styles.button}
       
       >
-      <Text style={styles.buttonText}>Se connecter </Text>
+      <Text style={styles.buttonText} >Se connecter </Text>
       </TouchableOpacity>
       <TouchableOpacity 
         onPress={handleSignUp}

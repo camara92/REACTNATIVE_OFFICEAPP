@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {View, StyleSheet, Text, Button } from 'react-native';
 import moment from "moment";
+import Login from '../screens_1/LoginScreen';
 const Home = ({ navigation }) => {
     // date à l'affiche 
     const [currentDate, SetCurrentDate]= useState(''); 
@@ -15,23 +16,23 @@ const Home = ({ navigation }) => {
      }, [])
 
     // console.log(props); 
-    const hanlePress = ()=>{
+    const handlePress = ()=>{
         //  navigation.navigate('Portefolio')
         navigation.navigate({routeName: "Profile"})
         //navigation.push('Portefolio')
 
     }
     // page de réservation bureau example de myoffice 
-    const hanlePressOffice = ()=>{
+    const handlePressOffice = ()=>{
         //  navigation.navigate('Portefolio')
         navigation.navigate({routeName: "Office"})
         //navigation.push('Portefolio')
 
     }
-
+    const WelcomeMessage= ("Bienvenue ")
     // fin de code office de bureau progrmini 
     // page inscription 
-    const hanleSignUp = ()=>{
+    const handleSignUp = ()=>{
         //  navigation.navigate('Portefolio')
         navigation.navigate({routeName: "Inscription"})
         //navigation.push('Portefolio')
@@ -47,15 +48,15 @@ const Home = ({ navigation }) => {
            <View style={styles.boutonnav}>
            <Text>🕸️</Text>
             <Button  title="Profile" 
-            onPress={hanlePress} />
+            onPress={handlePress} />
             {/* bouton de navigation pour la réservation  */}
             <Text>🕸️</Text>
             <Button style={styles.boutonnav} title="Office" 
-            onPress={hanlePressOffice} />
+            onPress={handlePressOffice} />
             {/* bouton inscripption  */}
             <Text>🕸️</Text>
             <Button style={styles.boutonnav} title="Inscription" 
-            onPress={hanleSignUp} />
+            onPress={handleSignUp} />
            </View>
         </View>
     );
