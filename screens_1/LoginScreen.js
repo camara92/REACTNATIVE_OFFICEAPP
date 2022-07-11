@@ -1,4 +1,4 @@
-import { StyleSheet, Text, KeyboardAvoidingView, View, TextInput, Button, placeholder } from 'react-native'
+import { StyleSheet, Text, KeyboardAvoidingView, View, TextInput, Button, placeholder, Alert } from 'react-native'
 import React,{useState} from 'react'
 import { TouchableOpacity } from 'react-native';
 //import {auth } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js"
@@ -28,11 +28,13 @@ const Login = () => {
     // const WelcomeMessage= ("Bienvenue "+email)
 
     // login 
+    const messageBienvenue = ("Bienvenue");
     const handleSignIn = ()=> {
       signInWithEmailAndPassword(auth, email, password)
       .then((userCredentials)=>{
        
         console.log('Vous êtes connecté. Bienvenue dans votre compte affluence. ')
+        // Alert.alert(messageBienvenue);
         // userCredentials.seconnecter
         const user = userCredentials.user; 
         console.log(user)
@@ -75,7 +77,8 @@ const Login = () => {
       <View style={styles.buttonContainer}>
       <TouchableOpacity 
         // onPress={()=>{}}
-        onPress={handleSignIn}
+         onPress={handleSignIn}
+        
         style={styles.button}
       
       >

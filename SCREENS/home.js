@@ -41,6 +41,8 @@ const Home = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Date du jour : { currentDate } </Text>
+
+            {/* <Text> {messageBienvenue} </Text> */}
             <Text style={styles.messageWelcole}>Bienvenue chez votre Office : plus de flexibilité et d'organisation. 
             Ceci est une application à titre apprentissage rapide du langage 
             react native en créant une sorte d'application de réservation des salles dans notre offiche. 
@@ -69,6 +71,7 @@ const styles = StyleSheet.create({
         justifyContent:"center", 
         alignItems:"center", 
         fontFamily: "Inter_900Black",
+        margin: 25,
       
        
 
@@ -80,7 +83,10 @@ const styles = StyleSheet.create({
     boutonnav:{
         
         backgroundColor: "light", 
-        textAlign:"center"
+        textAlign:"center", 
+        margin: 25,
+        width:"90%",
+        
     }, 
     messageWelcole: {
         textAlign:"center", 
