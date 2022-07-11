@@ -1,5 +1,6 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation'; 
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from '../SCREENS/home';
 import Profile from '../SCREENS/portefolio';
 import Photo from '../SCREENS/photo';
@@ -26,41 +27,68 @@ const date = moment(today).format("DD/MM/YYYY");
 //   )
 //   //console.log("daouda "+date)
 //  }, [])
-const screens ={
-    Home:{
-        screen:Home, 
-        navigationOptions: 
-        {
-            title: "Home" 
-        }
-    }, 
-    Profile: {
-        screen:Profile
-    }, 
-    Photo: {
-        screen:Photo
-    }, 
-    Office: {
-        screen:Office
-    }, 
-    Inscription:{
-        screen:Inscription
-    }, 
-    LoginScreen:{
-        screen: LoginScreen, 
-        navigationOptions: 
-        {
-            title: "Inscription" 
-        }
-    }, 
-    MyProfile:{
-        screen:MyProfil, 
-        navigationOptions:
-        {
-            title: "Profile"
-        }
-    }
+// const screens ={
+//     Home:{
+//         screen:Home, 
+//         navigationOptions: 
+//         {
+//             title: "Home" 
+//         }
+//     }, 
+//     Profile: {
+//         screen:Profile
+//     }, 
+//     Photo: {
+//         screen:Photo
+//     }, 
+//     Office: {
+//         screen:Office
+//     }, 
+//     Inscription:{
+//         screen:Inscription
+//     }, 
+//     LoginScreen:{
+//         screen: LoginScreen, 
+//         navigationOptions: 
+//         {
+//             title: "Inscription" 
+//         }
+//     }, 
+//     MyProfile:{
+//         screen:MyProfil, 
+//         navigationOptions:
+//         {
+//             title: "Profile"
+//         }
+//     }
 
- }
-const StackNav= createStackNavigator(screens)
+//  }
+
+const Stack = createNativeStackNavigator();
+
+const StackNav = (
+  <Stack.Navigator>
+    <Stack.Screen
+      name="Home"
+      component={Home} // <----
+    />
+    <Stack.Screen
+      name="Profile"
+      component={Profile} // <----
+    />
+    <Stack.Screen
+      name="Office"
+      component={Office} // <----
+    />
+    <Stack.Screen
+      name="Login"
+      component={Login} // <----
+    />
+     <Stack.Screen
+      name="Inscription"
+      component={Inscription} // <----
+    />
+  </Stack.Navigator>
+);
+ //const StackNav= createStackNavigator(screens)
 export default createAppContainer(StackNav)

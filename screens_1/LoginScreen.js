@@ -26,6 +26,7 @@ import { firebaseConfig } from "../firebase-config";
 import { log } from "react-native-reanimated";
 const Login = () => {
   const [email, setEmail] = useState("");
+ 
   const [password, setPassword] = useState("");
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
@@ -39,6 +40,13 @@ const Login = () => {
         console.log(user);
         const user = userCredentials.user;
         console.log(user.email);
+        const messageIncription = user.email; 
+        alert("Daouda")
+        alert("user"+ user.email)
+        console.log(messageIncription); 
+
+        
+
       })
       .catch((error) => alert(error.message));
   };
@@ -50,6 +58,7 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredentials) => {
         
+        
         console.log(
           "Vous êtes connecté. Bienvenue dans votre compte affluence. "
           
@@ -57,6 +66,7 @@ const Login = () => {
 
         const user = userCredentials.user;
         console.log(user);
+        
         // navigation.navigate({routeName: "Profile"})
         hanlePressAfterSign();
         console.log(handleSignIn)
@@ -67,7 +77,10 @@ const Login = () => {
   };
   // redirect to page profile for example
   const hanlePressAfterSign = () => {
-    navigation.navigate({ routeName: "Profile" });
+    navigation.navigate("Profile", 
+    {
+      email:"Bonjour "
+    });
     console.log("Bienvenue dans la page !!!");
   };
 
@@ -75,7 +88,7 @@ const Login = () => {
     <KeyboardAvoidingView style={styles.container} behavior="padding">
       <View style={styles.inputContainer}>
         <TextInput
-          minlength="8"
+         
           required
           placeholder="Email"
           value={email}
@@ -111,9 +124,12 @@ const Login = () => {
         <TouchableOpacity
           onPress={handleSignUp}
           style={[styles.button, styles.buttonOutline]}
+         
         >
           {/* <Text style={styles.buttonOutlineText}>Register  </Text> */}
-          <Text style={styles.buttonOutlineText} onPress={hanlePressAfterSign}>
+          <Text style={styles.buttonOutlineText} 
+          
+          >
             S'inscrire
           </Text>
         </TouchableOpacity>

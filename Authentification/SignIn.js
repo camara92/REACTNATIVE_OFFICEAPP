@@ -3,7 +3,7 @@ import {View, StyleSheet, Text, Button} from 'react-native';
 
 const Connexion = (props) => {
     const handlePressConnexion = ()=>{
-        props.navigation.navigate('Connexion')
+        props.navigation.navigate('Profile')
       
 
    }
