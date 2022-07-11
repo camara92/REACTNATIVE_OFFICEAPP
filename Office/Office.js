@@ -102,8 +102,8 @@ const styles = StyleSheet.create({
     }, 
     viewlist:{
      marginTop: 30, 
-     backgroundColor: "grey", 
-     padding: 19, 
+     padding: 25, 
+   
     
     }
     , 
@@ -111,6 +111,8 @@ const styles = StyleSheet.create({
      color: "white", 
      fontSize:20, 
      textAlign:"center", 
+    backgroundColor: "grey",
+    padding: 25, 
     }, 
     textbold:{
      fontWeight: "bold"

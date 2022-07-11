@@ -32,7 +32,7 @@ const Task= (props)=>{
 const styles = StyleSheet.create(
     {
         item: {
-            backgroundColor:"#fff", 
+            backgroundColor:"lightblue", 
             padding: 15, 
             borderRadius: 10, 
             alignItems:"center", 

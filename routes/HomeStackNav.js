@@ -1,17 +1,18 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation'; 
 import Home from '../SCREENS/home';
-import Portefolio from '../SCREENS/portefolio';
+import Profile from '../SCREENS/portefolio';
 import Photo from '../SCREENS/photo';
 import Office from '../Office/Office';
 import moment from 'moment';
 import Inscription from '../Authentification/SignUp';
 import LoginScreen from '../screens_1/LoginScreen';
 import HomeScreen from '../screens_1/HomeScreen';
+import MyProfil from '../Profiles.js/MyProfil';
 // importer les ecrans 
 //  const screens ={
 //     Home:Home, 
-//     Portefolio: Portefolio, 
+//     Prolfile: Prolfile, 
 //     Photo: Photo
 
 //  }
@@ -33,8 +34,8 @@ const screens ={
             title: "Home" 
         }
     }, 
-    Portefolio: {
-        screen:Portefolio
+    Profile: {
+        screen:Profile
     }, 
     Photo: {
         screen:Photo
@@ -46,8 +47,19 @@ const screens ={
         screen:Inscription
     }, 
     LoginScreen:{
-        screen: LoginScreen
+        screen: LoginScreen, 
+        navigationOptions: 
+        {
+            title: "Inscription" 
+        }
     }, 
+    // Profile:{
+    //     screen:MyProfil, 
+    //     navigationOptions:
+    //     {
+    //         title: "Profile"
+    //     }
+    // }
 
  }
 const StackNav= createStackNavigator(screens)

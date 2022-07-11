@@ -16,6 +16,7 @@ const Login = () => {
     // 
     const handleSignUp = () =>{
         // auth
+        
         createUserWithEmailAndPassword(auth, email, password)
         .then(userCredentials =>{
           console.log(user)
@@ -29,6 +30,7 @@ const Login = () => {
     const handleSignIn = ()=> {
       signInWithEmailAndPassword(auth, email, password)
       .then(()=>{
+       
         console.log('Vous êtes connecté. Bienvenue dans votre compte affluence. ')
         const user = userCredentials.user; 
         console.log(user)
@@ -47,6 +49,7 @@ const Login = () => {
             value={email}
             onChangeText={text=>setEmail(text)}
             style={styles.input }
+            secureTextEntry
 
         />
           <TextInput 
@@ -64,9 +67,9 @@ const Login = () => {
         // onPress={()=>{}}
         onPress={handleSignIn}
         style={styles.button}
+      
       >
       <Text style={styles.buttonText}>Se connecter </Text>
-
       </TouchableOpacity>
       <TouchableOpacity 
         onPress={handleSignUp}
@@ -136,7 +139,7 @@ const styles = StyleSheet.create({
     }
     ,
     buttonOutlineText:{
-        color: "#0782F9", 
+        color: "lightblue", 
         fontWeight:"700", 
         fontSize:16, 
     }

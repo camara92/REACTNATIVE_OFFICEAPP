@@ -1,15 +1,15 @@
 import React from 'react';
 import {View, StyleSheet, Text, Button} from 'react-native';
 
-const Portefolio = (props) => {
+const Profile = (props) => {
     const hanlePress = ()=>{
         props.navigation.navigate('Photo')
-       //navigation.push('Portefolio')
+       //navigation.push('Profile')
 
    }
     return (
         <View style={styles.container}>
-        <Text style={styles.text}>Portefolio</Text>
+        <Text style={styles.text}>Profile</Text>
         <Button title="Photo" 
             onPress={hanlePress} />
 
@@ -30,4 +30,4 @@ text:{
 }
 })
 
-export default Portefolio;
+export default Profile;

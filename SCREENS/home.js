@@ -17,7 +17,7 @@ const Home = ({ navigation }) => {
     // console.log(props); 
     const hanlePress = ()=>{
         //  navigation.navigate('Portefolio')
-        navigation.navigate({routeName: "Portefolio"})
+        navigation.navigate({routeName: "Profile"})
         //navigation.push('Portefolio')
 
     }
@@ -42,11 +42,11 @@ const Home = ({ navigation }) => {
             <Text style={styles.text}>Date du jour : { currentDate } </Text>
             <Text style={styles.messageWelcole}>Bienvenue chez votre Office : plus de flexibilité et d'organisation. 
             Ceci est une application à titre apprentissage rapide du langage 
-            react native en créant une sorte d'application de réservation des salles dans nitre offiche. 
-            Welcome To progrmini!  </Text>
+            react native en créant une sorte d'application de réservation des salles dans notre offiche. 
+             </Text>
            <View style={styles.boutonnav}>
            <Text>🕸️</Text>
-            <Button  title="Portefolio" 
+            <Button  title="Profile" 
             onPress={hanlePress} />
             {/* bouton de navigation pour la réservation  */}
             <Text>🕸️</Text>
@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
         justifyContent:"center", 
         alignItems:"center", 
         fontFamily: "Inter_900Black",
+      
        
 
 
@@ -77,12 +78,13 @@ const styles = StyleSheet.create({
     }, 
     boutonnav:{
         
-        backgroundColor: "lightblue", 
+        backgroundColor: "light", 
         textAlign:"center"
     }, 
     messageWelcole: {
         textAlign:"center", 
-        marginTop: 40
+        marginTop: 40, 
+        margin:25, 
     }
    
 })
